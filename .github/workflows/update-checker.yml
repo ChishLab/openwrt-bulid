@@ -6,8 +6,6 @@ env:
 
 on:
   workflow_dispatch:
-#  schedule:
-#    - cron: 0 */18 * * *
 
 jobs:
   check:
@@ -39,7 +37,7 @@ jobs:
         event-type: Source Code Update
 
     - name: Delete workflow runs
-      uses: GitRML/delete-workflow-runs@main
+      uses: GitRML/delete-workflow-runs@master
       with:
         retain_days: 1
         keep_minimum_runs: 1
